@@ -1,0 +1,6 @@
+title: Adam Stanger
+description: Producer, director, and builder of the tools behind the work.
+remote_theme: broccolini/swiss
+theme_color: orange
+plugins:
+  - jekyll-remote-theme
