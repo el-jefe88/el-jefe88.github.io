@@ -34,11 +34,11 @@ This documents verified work, real constraints discovered during testing, and th
 
 ## Monitoring and Alerting
 
-![Uptime Kuma dashboard](/assets/images/kuma2.png)
+<img src="/assets/images/kuma2.png" width="75%">
 
-![Uptime Kuma dashboard](/assets/images/kuma4.png)
+<img src="/assets/images/kuma4.png" width="75%">
 
-![Uptime Kuma dashboard](/assets/images/kuma3.png)
+<img src="/assets/images/kuma3.png" width="75%">
 
 | Monitor | Type | Purpose | Status |
 |---|---|---|---|
