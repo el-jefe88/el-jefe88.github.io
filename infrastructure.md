@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: home
 title: Infrastructure
 ---
 
-# Self-Hosted Website Infrastructure, Monitoring, and Resilience
+# Infrastructure
+
+## Self-Hosted Website Infrastructure, Monitoring, and Resilience
 
 A hands-on infrastructure project for hosting public websites on self-managed hardware, publishing them through existing Cloudflare routes and Nginx Proxy Manager, monitoring availability with Uptime Kuma, and delivering operational alerts through Telegram.
 
@@ -32,7 +34,11 @@ This documents verified work, real constraints discovered during testing, and th
 
 ## Monitoring and Alerting
 
-![Uptime Kuma dashboard](assets/images/kuma1.png)
+![Uptime Kuma dashboard](/assets/images/kuma2.png)
+
+![Uptime Kuma dashboard](/assets/images/kuma4.png)
+
+![Uptime Kuma dashboard](/assets/images/kuma3.png)
 
 | Monitor | Type | Purpose | Status |
 |---|---|---|---|
