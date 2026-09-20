@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 # You can't automate instinct and you can't program taste.
