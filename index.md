@@ -21,7 +21,7 @@ A hands-on project hosting public websites on self-managed hardware, monitored w
 
 ![Uptime Kuma dashboard](assets/images/kuma1.png)
 
-[View the full repo →](REPLACE-WITH-YOUR-REPO-LINK)
+[View the full repo →](infrastructure.html)
 
 ---
 
