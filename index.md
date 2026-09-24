@@ -49,8 +49,7 @@ Creative direction and production management across Southeast Asia for governmen
 
 ## Press
 
-Featured in the [LA Examiner]((https://laexaminer.com/ai-moves-beyond-automation-to-cut-costs-and-change-business-workflows/)) on how businesses are using AI to cut costs and restructure content production workflows.
-
+Featured in the [LA Examiner](https://laexaminer.com/ai-moves-beyond-automation-to-cut-costs-and-change-business-workflows/) on how businesses are using AI to cut costs and restructure content production workflows.
 ---
 
 ## Writing
