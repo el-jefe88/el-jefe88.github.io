@@ -18,12 +18,15 @@ Tools for turning a paper edit — clock-time in/out points, logged by hand — 
 ## How It Works
 
 **1. Log each segment**
+
 ```bash
 ./log_clip.sh clips.csv "/path/to/source.mp4" 00:03:05 00:03:15
 ```
+
 Every call appends one row to a plain CSV file. Multiple selects from the same source auto-number themselves.
 
 **2. Convert to DNxHR**
+
 ```bash
 ./extract_clips.sh clips.csv /path/to/output --preset hq
 ```
@@ -38,24 +41,24 @@ Every call appends one row to a plain CSV file. Multiple selects from the same s
 Each preset writes into its own subfolder, so a proxy pass and a full-quality pass of the same list never collide.
 
 **3. Verify before trusting the whole batch**
+
 ```bash
 ffprobe -hide_banner -v error -select_streams v:0 \
   -show_entries stream=codec_name,profile,pix_fmt,width,height,r_frame_rate \
   /path/to/output/dnxhr_hq/your_clip_seg1.mov
 ```
+
 Then straight into Resolve's Media Pool.
 
 ## The Browser App
 
-<img src="/assets/images/Paper_Edit--_Clips.png" width="90%">
+<img src="/assets/images/Paper_Edit--_Clips.png" width="75%">
 
 A single self-contained HTML file — no frameworks, no build step, no backend — for visually logging and reviewing a long segment list before exporting. It generates the same CSV format and the same `ffmpeg` commands as the terminal tools, so the two are fully interchangeable: log with the script, review in the app, or vice versa.
 
 ## Being Honest About the Limits
 
-The browser app's segment list only persists in that specific browser's local storage. A cache clear, a private window, or switching browsers loses it. **The terminal workflow doesn't have this problem** — a CSV on disk survives all of that — which is why it's the recommended path, not just an alternative.
-
-Real-world footage also occasionally breaks assumptions the tool makes. One source file during active use produced a `FATAL error, file duration too long for timebase` from ffmpeg — an unusual timebase in that specific file's metadata, not a bug in the script. The fix (`-video_track_timescale 15360`) is now a known, documented workaround rather than a mystery, but it's a good reminder that any automation touching real camera files needs a verification step, not blind trust.
+The browser app's segment list only persists in that specific browser's local storage. A cache clear, a private window, or switching browsers loses it. The terminal workflow doesn't have this problem — a CSV on disk survives all of that — which is why it's the recommended path, not just an alternative.
 
 ## Files in the Kit
 
