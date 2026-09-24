@@ -3,6 +3,7 @@ layout: project
 title: Paper Edit → Clips
 description: Turning a handwritten shot log into ready-to-cut DNxHR footage.
 ---
+<link rel="stylesheet" href="/assets/css/custom.css">
 
 Tools for turning a paper edit — clock-time in/out points, logged by hand — into DNxHR clips ready for DaVinci Resolve on Linux. Two ways to work: a terminal-only workflow (durable, plain text, nothing lost if a tab closes) and a browser app (visual, good for reviewing a long list). Both produce the same CSV format and the same `ffmpeg` commands.
 
