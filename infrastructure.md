@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Infrastructure
+description: Self-hosted website hosting, monitoring, and resilience.
 ---
 
 ## Self-Hosted Website Infrastructure, Monitoring, and Resilience
