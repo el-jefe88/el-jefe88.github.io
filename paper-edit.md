@@ -1,24 +1,26 @@
 ---
 layout: project
 title: Paper Edit → Clips
-description: Turning a handwritten paper edit into ready-to-cut DNxHR clips.
+description: Turning a handwritten shot log into ready-to-cut DNxHR footage.
 ---
 
-# Paper Edit → Clips
+Tools for turning a paper edit — clock-time in/out points, logged by hand — into DNxHR clips ready for DaVinci Resolve on Linux. Two ways to work: a terminal-only workflow (durable, plain text, nothing lost if a tab closes) and a browser app (visual, good for reviewing a long list). Both produce the same CSV format and the same `ffmpeg` commands.
 
-Tools for turning a paper edit — a list of clock-time in/out points, logged by hand — into DNxHR clips ready for DaVinci Resolve on Linux.
+## Project Goals
 
-I still log footage the old way: pen, paper, timecodes. The technology exists to skip that step, but the judgment call of *what's worth keeping* is exactly the part that shouldn't be automated. This kit picks up right after that human decision is made, and automates everything mechanical from there — logging, transcoding, verifying — so the only slow part left is the part that should be slow.
+- Preserve the human judgment call — what's worth keeping — as a paper-and-pen step, not an automated one
+- Automate everything mechanical after that decision: logging, transcoding, verifying
+- Keep the workflow durable — plain text on disk, not dependent on a browser tab staying open
+- Support multiple quality tiers from the same source list, without re-logging anything
+- Never let one bad row silently kill an entire batch
 
-Two ways to work: a terminal-only workflow (durable, plain text, nothing lost if a tab closes) and a browser app (visual, good for reviewing a long list). Both produce the same CSV format and the same `ffmpeg` commands.
+## How It Works
 
-## Terminal Workflow
-
-**1. Log each clip segment**
+**1. Log each segment**
 ```bash
 ./log_clip.sh clips.csv "/path/to/source.mp4" 00:03:05 00:03:15
 ```
-Every call appends one row to `clips.csv`. Multiple selects from the same source auto-number themselves.
+Every call appends one row to a plain CSV file. Multiple selects from the same source auto-number themselves.
 
 **2. Convert to DNxHR**
 ```bash
@@ -32,6 +34,8 @@ Every call appends one row to `clips.csv`. Multiple selects from the same source
 | `hq` | Full quality, edit-and-deliver (default) |
 | `hqx` | 10-bit finishing/mastering |
 
+Each preset writes into its own subfolder, so a proxy pass and a full-quality pass of the same list never collide.
+
 **3. Verify before trusting the whole batch**
 ```bash
 ffprobe -hide_banner -v error -select_streams v:0 \
@@ -40,14 +44,30 @@ ffprobe -hide_banner -v error -select_streams v:0 \
 ```
 Then straight into Resolve's Media Pool.
 
-## Browser App
+## The Browser App
 
-A single self-contained HTML file — no frameworks, no build step, no backend — for visually reviewing a long segment list before exporting. Same CSV format as the terminal tools; the two are fully interchangeable.
+<img src="/assets/images/Paper_Edit--_Clips.png" width="90%">
 
-## Why It's Built This Way
+A single self-contained HTML file — no frameworks, no build step, no backend — for visually logging and reviewing a long segment list before exporting. It generates the same CSV format and the same `ffmpeg` commands as the terminal tools, so the two are fully interchangeable: log with the script, review in the app, or vice versa.
 
-- **Clock-time in/out points**, not frame-based — matches how a paper edit actually gets logged by hand.
-- **Fast input seek** (`-ss` before `-i`) — accurate for re-encodes, much faster than decoding the whole file first.
-- **Never halts on one bad row** — the extraction script reports success or failure per line and skips anything invalid, rather than losing an entire batch over one typo.
+## Being Honest About the Limits
 
-[View the full repository on GitHub →](REPLACE-WITH-YOUR-REPO-LINK)
+The browser app's segment list only persists in that specific browser's local storage. A cache clear, a private window, or switching browsers loses it. **The terminal workflow doesn't have this problem** — a CSV on disk survives all of that — which is why it's the recommended path, not just an alternative.
+
+Real-world footage also occasionally breaks assumptions the tool makes. One source file during active use produced a `FATAL error, file duration too long for timebase` from ffmpeg — an unusual timebase in that specific file's metadata, not a bug in the script. The fix (`-video_track_timescale 15360`) is now a known, documented workaround rather than a mystery, but it's a good reminder that any automation touching real camera files needs a verification step, not blind trust.
+
+## Files in the Kit
+
+| File | Purpose |
+|---|---|
+| `log_clip.sh` | Appends one in/out segment to a CSV |
+| `extract_clips.sh` | Reads a CSV, transcodes every row to DNxHR at the chosen preset(s) |
+| `paper_edit_csv.html` | Browser app — visual alternative, same underlying format |
+| `clips_example.csv` | Example CSV showing the expected format |
+| `README.md` | Full documentation |
+
+## Currently In Use
+
+Actively logging and transcoding footage for a live edit right now — segments get discarded as the cut narrows, and surviving clips go straight into Resolve.
+
+[Download the tools on GitHub →](REPLACE-WITH-YOUR-REPO-LINK)
