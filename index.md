@@ -19,18 +19,14 @@ title: Home
 
 A hands-on project hosting public websites on self-managed hardware, monitored with Uptime Kuma and alerted through Telegram — including honest documentation of where the monitoring itself has real limits, like a monitor that can't report its own host losing power.
 
-![Uptime Kuma dashboard](assets/images/kuma1.png)
+[View the full repo →](https://el-jefe88.github.io/infrastructure.html)
 
-[View the full repo →](infrastructure.html)
-
-[Paper Edit → Clips: turning handwritten logs into ready-to-cut footage →](paper-edit.html)
-
----
+[Paper Edit → Clips: turning handwritten logs into ready-to-cut footage →](https://el-jefe88.github.io/paper-edit.html)
 
 ## What I Make
 
-- [Self-Hosted Infrastructure](infrastructure.html) — monitoring, alerting, and honest documentation of what still doesn't work yet
-- [Paper Edit → Clips](paper-edit.html) — turning a handwritten shot log into ready-to-cut footage, currently in active use
+- [Self-Hosted Infrastructure](https://el-jefe88.github.io/infrastructure.html) — monitoring, alerting, and honest documentation of what still doesn't work yet
+- [Paper Edit → Clips](https://el-jefe88.github.io/paper-edit.html) — turning a handwritten shot log into ready-to-cut footage, currently in active use
 
 ---
 
@@ -50,11 +46,12 @@ Creative direction and production management across Southeast Asia for governmen
 ## Press
 
 Featured in the [LA Examiner](https://laexaminer.com/ai-moves-beyond-automation-to-cut-costs-and-change-business-workflows/) on how businesses are using AI to cut costs and restructure content production workflows.
+
 ---
 
 ## Writing
 
-Longer-form thinking on AI, production, and the entertainment industry lives at [HollAIwood](REPLACE-WITH-LINK) — reporting from inside the build, not from the sidelines.
+Longer-form thinking on AI, production, and the entertainment industry lives at [HollAIwood](https://el-jefe88.github.io/REPLACE-WITH-LINK) — reporting from inside the build, not from the sidelines.
 
 ---
 
