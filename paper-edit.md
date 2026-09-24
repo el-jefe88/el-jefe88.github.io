@@ -74,4 +74,4 @@ The browser app's segment list only persists in that specific browser's local st
 
 Actively logging and transcoding footage for a live edit right now — segments get discarded as the cut narrows, and surviving clips go straight into Resolve.
 
-[Download the tools on GitHub →](REPLACE-WITH-YOUR-REPO-LINK)
+[Download the tools on GitHub →](https://github.com/el-jefe88/paper-edit-clips)
