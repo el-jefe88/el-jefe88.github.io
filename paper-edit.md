@@ -52,7 +52,7 @@ Then straight into Resolve's Media Pool.
 
 ## The Browser App
 
-<img src="/assets/images/Paper Edit-->Clips.png" width="75%">
+<img src="/assets/images/paper-edit-screenshot.png" width="75%">
 
 A single self-contained HTML file — no frameworks, no build step, no backend — for visually logging and reviewing a long segment list before exporting. It generates the same CSV format and the same `ffmpeg` commands as the terminal tools, so the two are fully interchangeable: log with the script, review in the app, or vice versa.
 
