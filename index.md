@@ -23,7 +23,10 @@ A hands-on project hosting public websites on self-managed hardware, monitored w
 
 [View the full repo →](infrastructure.html)
 
+[Paper Edit → Clips: turning handwritten logs into ready-to-cut footage →](paper-edit.html)
+
 ---
+
 
 ## Production
 
