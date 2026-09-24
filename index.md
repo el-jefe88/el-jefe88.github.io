@@ -27,6 +27,12 @@ A hands-on project hosting public websites on self-managed hardware, monitored w
 
 ---
 
+## What I Make
+
+- [Self-Hosted Infrastructure](infrastructure.html) — monitoring, alerting, and honest documentation of what still doesn't work yet
+- [Paper Edit → Clips](paper-edit.html) — turning a handwritten shot log into ready-to-cut footage, currently in active use
+
+---
 
 ## Production
 
