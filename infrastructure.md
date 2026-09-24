@@ -3,8 +3,6 @@ layout: project
 title: Infrastructure
 ---
 
-# Infrastructure
-
 ## Self-Hosted Website Infrastructure, Monitoring, and Resilience
 
 A hands-on infrastructure project for hosting public websites on self-managed hardware, publishing them through existing Cloudflare routes and Nginx Proxy Manager, monitoring availability with Uptime Kuma, and delivering operational alerts through Telegram.
