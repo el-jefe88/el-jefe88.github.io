@@ -51,7 +51,7 @@ Featured in the [LA Examiner](https://laexaminer.com/ai-moves-beyond-automation-
 
 ## Writing
 
-Longer-form thinking on AI, production, and the entertainment industry lives at [HollAIwood](https://el-jefe88.github.io/REPLACE-WITH-LINK) — reporting from inside the build, not from the sidelines.
+Longer-form thinking on AI, production, and the entertainment industry reporting from inside the build, not from the sidelines lives at [HollAIwood](https://el-jefe88.github.io/REPLACE-WITH-LINK) — .
 
 ---
 
