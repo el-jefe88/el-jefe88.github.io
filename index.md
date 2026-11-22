@@ -12,6 +12,7 @@ title: Home
 ## Now
 
 **September 2026** — Building out a self-hosted monitoring and resilience stack (Uptime Kuma, Telegram alerts, cross-device recovery testing) and launching freelance video editing services.
+
 **November 2026** — Building a news pipeline (n8n, local AI models, Telegram alerts, Discord) where automation collects and drafts and every keeper is spot-checked against its source. Prompts are suggestions while code is a rule now in a week of unattended testing with no cloud or AI costs.  It's called HollAIwood.  First editing gig wrapped in October.
 ---
 
